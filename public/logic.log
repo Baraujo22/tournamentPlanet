@@ -1,0 +1,41 @@
+"TO DO":
+    "MAKE THE MODALITY DESIGNER A MULTIPLE OPTION PAGE"
+
+        SELECT MODALITY -> Redirect to the VIEW MODALITY page.
+            IN MODALITY THE PAGE:
+                OPTION 1 = --ADD-- FUNCTIONALITIES.
+                OPTION 2 = --EDIT-- ITS CHARACTERISTICS
+                OPTION 3 = --EDIT-- FUNCTIONALITIES
+
+        [ + ] -> Redirect to CREATE MODALITY page.
+            IN THE CREATE MODALITY PAGE:
+                OPTION 1 = --CREATE-- A BRAND NEW MODALITY TEMPLATE. --ADD-- CHARACTERISTICS AND FUNCTIONALITIES
+
+
+    "MODALITY TEMPLATE OWNERSHIP"
+        [PUBLIC, PRIVATE, GROUP] REQUIRED FOR NEXT STEPS <--
+
+        - If I change any information of the auto-populated fields, it can be saved as a new modality if I do not own the template and want to have a personal copy of the template (to be able to edit it).
+
+        - If I DO own the modality template, however, it will give me the option to save the modifications into the same template [EDIT], or as a different template [SAVE AS].
+
+        - Once saved, the system will allow me to ADD characteristics and functionalities to the template (such as targets/goals types, amounts, scoring standards, timing).
+
+        --> MODALITY OWNERSHIP SECTION ENDS HERE <--
+
+    "PUT TARGET-TABLE IN DATABASE"
+        - Need to submit the target-form through AJAX so it doesn't update the page and so it automatically loads the target information next time you pull the modality.
+        - Create a table in the "tournamentDB"
+        - Either an edit to a modality -OR- it will have to be added as you are creating the modality.
+
+    "MIRRORING"
+        - database backup -> primary database needs to have a backup (secondary databse) in case it fails or it or its data     is deleted. backup should be automatically updated when a registries are inserted && manually updated when anything     needs to be updated, altered, or removed. (??) 
+-------------------------------------------------------------------------------------------------------------------------
+'DONE':
+        - Create TARGETS button will create another form which allows to create functionalities/characteristics to the modality.
+        - This Target button will probably be an AJAX request in order to bring in an external html code into that div.
+        - I need to make the "New" option ONLY save a new modality into the database. 
+        - If I select a modality that already exists, then the form fields will be automatically populated by the templates.
+        - APPLY MVC BY MAKING A FUNCTION IN MODEL
+        - Seng modality AJAX request to a different file so it's invisible to the user.
+-------------------------------------------------------------------------------------------------------------------------
