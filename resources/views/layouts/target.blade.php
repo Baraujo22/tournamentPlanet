@@ -1,4 +1,5 @@
-<form action="submit" method="POST">
+<form action="modts" method="POST">
+@csrf
   <div class="target-table">
     <table>
       <tbody>
@@ -6,14 +7,14 @@
           <td>Description
           </td>
           <td>
-            <input type="text" class="target-description">
+            <input type="text" class="targetDescription">
           </td>
         </tr>
         <tr>
           <td>Level
           </td>
           <td>
-            <select name="" class="target-level">
+            <select name="" class="targetLevel">
               <option value="">Beginner
               </option>
               <option value="">Intermediate
@@ -27,7 +28,7 @@
           <td>Target Type
           </td>
           <td>
-            <select name="" class="target-type">
+            <select name="" class="targetType">
               <option value="">Fixed
               </option>
               <option value="">Moving
@@ -41,21 +42,21 @@
           <td>Distance (ft)
           </td>
           <td>
-            <input type="number" class="target-distance">
+            <input type="number" class="targetDistance">
           </td>
         </tr>
         <tr>
           <td>Maximum shots allowed
           </td>
           <td>
-            <input type="number" class="target-maxshots">
+            <input type="number" class="targetMaxshots">
           </td>
         </tr>
         <tr>
           <td>Requirement
           </td>
           <td>
-            <select name="" class="target-requirement">
+            <select name="" class="targetRequirement">
               <option value="">Required
               </option>
               <option value="">Optional
@@ -81,7 +82,7 @@
         </tr>
       </tbody>
     </table>
-    <input type="button" class="pointer target-save" style="float:inline-end; margin-top:2vh" value="Save Target">
+    <input type="submit"  class="btn btn-primary pointer target-save" style="float:inline-end; margin-top:2vh" value="Save Target">
   </div>
   <br>
 </form>

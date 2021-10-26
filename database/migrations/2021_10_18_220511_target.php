@@ -15,11 +15,15 @@ class Target extends Migration
     {
         Schema::create('target', function (Blueprint $table) {
             $table->bigIncrements('Modality_Id');
-            $table->string('modName')->required();
+            $table->string('modName')->nullable();
+            $table->string('targetDescription')->required();
             $table->string('targetLevel')->required();
             $table->string('targetType')->required();
             $table->integer('targetDistance')->required();
             $table->smallinteger('targetMaxShots')->required();
+            $table->string('requirement')->required();
+            $table->string('scoringFactors')->required();
+
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->nullable();
         });

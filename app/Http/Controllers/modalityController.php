@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\facades\DB;
 use App\Models\Modality;
+use App\Models\Target;
 use Exception;
 
 class modalityController extends Controller
@@ -39,9 +40,27 @@ class modalityController extends Controller
         
         return view('layouts.target');
     }
-    function targetSave(){
+    function targetSave(Request $request){
         
-        return "Target Saved!";
+        $request->validate([
+            
+            'targetDescription' => 'required',
+            'targetLevel'=>'required',
+            'targetType'=>'nullable',
+            'targetDistance'=>'required',
+            'targetMaxShots'=>'required',
+    
+            ]);
+        $target = new Target;
+        $target->targetDescription = $request->input('targetDescription');
+//        $target->modName = $request->input('modName');
+        $target->targetLevel = $request->input('targetLevel');
+        $target->targetType = $request->input('targetType');
+        $target->targetDistance = $request->input('targetDistance');
+        $target->targetMaxShots = $request->input('targetMaxShots');
+
+        $target->save();
+        return redirect('designer');
     }
 
     public function save(Request $req)

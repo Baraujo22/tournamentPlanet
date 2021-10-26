@@ -12,11 +12,13 @@ class Target extends Model
     {
         $fillable = [
             'Modality_Id',
-            'targetName',
+            'targetDescription',
             'targetLevel',
             'targetType',
             'targetDistance',
             'targetMaxShots',
+            'requirement',
+            'scoringFactors',
             'created_at',
         ];
     }

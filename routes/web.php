@@ -21,9 +21,9 @@ Route::get('/designer', [modalityController::class, 'index'])->name('modality');
 
 Route::post('/modalityformfetch', [modalityController::class, 'fetch'])->name('modalityform.fetch');
 
-Route::get('/modalityformtarget', [modalityController::class, 'target'])->name('modalityform.target');
+Route::get('/modt', [modalityController::class, 'target'])->name('modalityform.target');
 
-Route::post('/modalityformtargetsave', [modalityController::class, 'targetSave'])->name('modalityform.target');
+Route::post('/modts', [modalityController::class, 'targetSave'])->name('modalityformTarget');
 
 Route::post('/submit', [modalityController::class, 'save'])->name('modalityFormSubmit');
 
